@@ -82,59 +82,65 @@ export default function Register() {
 
 
   return (
-    <div className="page-bg mt-5">
-      <form onSubmit={submitRegisterForm} className="register-form mx-auto">
+    <div className="page-bg mt-5 d-flex left-side m-5">
+      <div className="w-50 d-flex flex-column justify-content-center align-items-center  ">
+        <h3 className="">Welcome to</h3>
+        <h6 className=" mb-5">Student Portal</h6>
+        <i class="fa-solid fa-circle-user login-icon "></i>
+      </div>
+
+
+      <form onSubmit={submitRegisterForm} className="register-form  bg-dark-subtle d-flex flex-column">
         <h2 className="text-center mb-5">Graduate Studies Registration</h2>
 
-
-        <label className="fw-semibold mb-1">First Name</label>
+        <label className="fw-semibold mb-1 link-password">First Name</label>
         <input onChange={getUserData}
           type="text"
-          className="form-control mb-4"
+          className="form-control mb-4 w-75 mx-auto"
           placeholder="Enter first name"
           name='first_name'
         />
 
-        <label className="fw-semibold mb-1">Last Name</label>
+        <label className="fw-semibold mb-1 link-password">Last Name</label>
         <input onChange={getUserData}
           type="text"
-          className="form-control mb-4"
+          className="form-control mb-4 w-75 mx-auto"
           placeholder="Enter last name"
           name='last_name'
         />
 
-        <label className="fw-semibold mb-1">Email</label>
+        <label className="fw-semibold mb-1 link-password">Email</label>
         <input onChange={getUserData}
           type="email"
-          className="form-control mb-4"
+          className="form-control mb-4 w-75 mx-auto"
           placeholder="Enter email"
           name='email'
         />
 
-        <label className="fw-semibold mb-1">Certificate</label>
+        <label className="fw-semibold mb-1 link-password">Certificate</label>
         <select
           name="certificate"
           onChange={getUserData}
-          className="form-select mb-4"
+          className="form-select mb-4 w-75 mx-auto"
         >
           <option value="">Select certificate</option>
           <option value="master">Master's Degree</option>
           <option value="phd">Doctoral Degree</option>
         </select>
 
-        <label className="fw-semibold mb-1">National ID</label>
+        <label className="fw-semibold mb-1 link-password">National ID</label>
         <input onChange={getUserData}
           type="text"
-          className="form-control mb-4"
+          className="form-control mb-4 w-75 mx-auto"
           placeholder="Enter ID"
           name='nationalID'
         />
 
 
-        <label className="fw-semibold mb-1">Password</label>
+        <label className="fw-semibold mb-1 link-password">Password</label>
         <input onChange={getUserData}
           type="password"
-          className="form-control mb-4"
+          className="form-control mb-4 w-75 mx-auto"
           placeholder="Enter password"
           name='password'
         />
@@ -147,7 +153,7 @@ export default function Register() {
 
         {error && <div className="alert alert-danger">{error}</div>}
 
-        <button type="submit" className="btn btn-primary w-100 py-2">
+        <button type="submit" className="btn btn-primary w-75 mx-auto  ">
           Submit Application
         </button>
       </form>

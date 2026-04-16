@@ -1,81 +1,134 @@
-import React from 'react'
-import csImg from '../../image/2.jfif'
-import aiImg from '../../image/3.jfif'
-import seImg from '../../image/4.jfif'
-import isImg from '../../image/1.jfif'
-import heroBg from '../../image/home.png'
-
+import React from "react";
+import heroBg from "../../image/home.png";
 
 export default function Home() {
   return (
-    <>
-      {/* Hero Section */}
-      <section
-        className="hero-section text-white text-center py-5"
+    <div>
+
+      {/* 🚀 HERO */}
+      <div
+        className="text-white py-5 hero-section"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url(${heroBg})`
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${heroBg})`,
         }}
       >
-        <div className="container">
-          <h1 className="fw-bold mb-3">نظام متكامل لإدارة الدراسات العليا</h1>
-          <p className="mb-4">طريقك نحو الماجستير والدكتوراه</p>
+        <div className="container py-5">
+          <div className="row align-items-center">
 
-          <div className="d-flex justify-content-center gap-4 flex-wrap">
-            <button className="btn btn-primary px-4">التقديم للماجستير</button>
-            <button className="btn btn-success px-4">التقديم للدكتوراه</button>
-          </div>
-        </div>
-      </section>
+            <div className="col-md-7">
+              <span className="badge bg-warning text-dark mb-3">
+                Graduate Portal
+              </span>
 
-      {/* Search Section */}
-      <div className="container mt-5">
-        <h3 className="text-center mb-4">ابحث في النظام</h3>
+              <h1 className="fw-bold display-4">
+                Start Your Academic Journey 🎓
+              </h1>
 
-        <div className="row justify-content-center g-4">
-          <div className="col-md-5">
-            <div className="card shadow-sm p-3 text-center">
-              <h5 className="mb-4">بحث باسم الطالب</h5>
-              <input className="form-control mb-3 text-center" placeholder="اسم الطالب" />
-              <button className="btn btn-primary">بحث</button>
+              <p className="mt-3 text-light fs-5">
+                Apply for Master & PhD programs and track everything in one place.
+              </p>
+
+              <button className="btn btn-light me-2 mt-3 px-4">
+                Apply Now
+              </button>
+
+              <button className="btn btn-outline-light mt-3 px-4">
+                Explore Programs
+              </button>
             </div>
-          </div>
 
-          <div className="col-md-5">
-            <div className="card shadow-sm p-3 text-center">
-              <h5 className="mb-4">بحث باسم الدكتور</h5>
-              <input className="form-control mb-3 text-center" placeholder="اسم الدكتور" />
-              <button className="btn btn-primary">بحث</button>
-            </div>
           </div>
         </div>
       </div>
 
-      <hr className="opacity-25 my-5" />
-
-      {/* Departments */}
-      <div className="container mb-5">
-        <h3 className="text-center mb-4">أقسام الكلية</h3>
-
+      {/* 💡 FEATURES */}
+      <div className="container py-5">
         <div className="row g-4">
-          <DepartmentCard img={csImg} title="Computer Science" />
-          <DepartmentCard img={isImg} title="Information Systems" />
-          <DepartmentCard img={aiImg} title="Artificial Intelligence" />
-          <DepartmentCard img={seImg} title="Software Engineering" />
+
+          {[
+            "Easy Application",
+            "Track Status",
+            "Multiple Programs",
+            "Secure System",
+          ].map((item, i) => (
+            <div className="col-md-3" key={i}>
+              <div className="feature-card p-4 text-center h-100">
+                <h5 className="fw-bold">{item}</h5>
+                <p className="small ">
+                  Simple and fast experience
+                </p>
+              </div>
+            </div>
+          ))}
+
         </div>
       </div>
-    </>
-  )
-}
 
-function DepartmentCard({ img, title }) {
-  return (
-    <div className="col-md-3 col-sm-6">
-      <div className="card department-card text-center p-3 h-100">
-        <img src={img} alt={title} className="department-img mb-3" />
-        <p className="fw-semibold">{title}</p>
-        <hr className="opacity-25 w-75 mx-auto" />
-        <button className="btn btn-info text-white">بحث</button>
+      {/* 🎓 PROGRAMS */}
+      <div className="bg-light py-5">
+        <div className="container">
+          <h2 className="text-center fw-bold mb-5">Programs</h2>
+
+          <div className="row g-4">
+
+            <div className="col-md-6">
+              <div className="program-card card p-4 h-100 border-0 shadow-sm">
+                <h4 className="fw-bold">Master Programs</h4>
+                <p className="text-muted">
+                  Explore various master degree opportunities
+                </p>
+                <button className="btn btn-success w-25">
+                  View Details
+                </button>
+              </div>
+            </div>
+
+            <div className="col-md-6">
+              <div className="program-card card p-4 h-100 border-0 shadow-sm">
+                <h4 className="fw-bold">PhD Programs</h4>
+                <p className="text-muted">
+                  Advanced research and doctoral programs
+                </p>
+                <button className="btn btn-success w-25">
+                  View Details
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
       </div>
+
+      {/* 🧭 HOW IT WORKS */}
+      <div className="container py-5">
+        <h2 className="text-center fw-bold mb-5">How It Works</h2>
+
+        <div className="row g-4 text-center">
+
+          <div className="col-md-4">
+            <div className="step-card p-4 h-100">
+              <h5>1. Sign Up</h5>
+              <p >Create your account بسهولة</p>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="step-card p-4 h-100">
+              <h5>2. Apply</h5>
+              <p >Choose your program</p>
+            </div>
+          </div>
+
+          <div className="col-md-4">
+            <div className="step-card p-4 h-100">
+              <h5>3. Track</h5>
+              <p >Follow your application status</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
-  )
+  );
 }

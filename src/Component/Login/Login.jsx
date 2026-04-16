@@ -67,22 +67,29 @@ async function sendUserDataToApi() {
     }
   }
   return (
-    <div className="login-page d-flex align-items-center justify-content-center mt-5">
-      <form onSubmit={submitLoginForm} className="login-form p-4">
+    <div className="page-bg mt-5 d-flex left-side m-5">
+    <div className="w-50 d-flex flex-column justify-content-center align-items-center m-4">
+        <h3 className="">Welcome to</h3>
+        <h6 className=" mb-3">Student Portal</h6>
+        <i className="fa-solid fa-circle-user login-icon "></i>
+      </div>
+
+
+      <form onSubmit={submitLoginForm} className=" register-form  bg-dark-subtle d-flex flex-column">
         <h2 className="text-center mb-4">Login</h2>
 
-        <label className="fw-semibold mb-1">Email</label>
+        <label className="fw-semibold mb-1 link-password">Email</label>
         <input onChange={getUserData}
           type="email"
-          className="form-control mb-4"
+          className="form-control mb-4 w-75 mx-auto "
           placeholder="Enter email"
           name='email'
         />
 
-        <label className="fw-semibold mb-1">Password</label>
+        <label className="fw-semibold mb-1 link-password">Password</label>
         <input onChange={getUserData}
           type="password"
-          className="form-control mb-4"
+          className="form-control mb-4 w-75 mx-auto"
           placeholder="Enter password"
           name='password'
         />
@@ -93,12 +100,12 @@ async function sendUserDataToApi() {
           </div>
         ))}
 
-        {error && <div className="alert alert-danger">{error}</div>}
+        {error && <div className="alert alert-danger ">{error}</div>}
 
         
-        <a href="#" onClick={(e)=> e.preventDefault()} className='text-decoration-none text-dark text-muted pb-1'>Forget password?</a>
+        <Link className='text-decoration-none text-dark text-muted pb-1 link-password' to='/resetPassword'>Forget password?</Link>
 
-        <button className="btn btn-primary w-100 py-2 mb-3">Login</button>
+        <button className="btn btn-primary w-75 mx-auto py-2 mb-3">Login</button>
 
         <p className="text-center">
           Don't have an account? <Link to="/register">Register</Link>

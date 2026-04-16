@@ -1,3 +1,5 @@
+
+
 :root
 {
   --bg-main:#131722;
@@ -10,7 +12,6 @@
 
 body {
   font-family:'Montserrat Alternates', sans-serif;
-  
   color: var(--bg-main);
   padding-bottom: 70px;
   padding-top:50px
@@ -48,108 +49,71 @@ body {
 
 
 
-
-ال home
-.hero-section {
-  background-size: cover;
-  background-position: center;
-}
-
-.department-card {
-  transition: 0.3s ease;
-}
-
-.department-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
-}
-
-.department-img {
-  height: 140px;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-ال register 
-.page-bg {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0d6efd, #0a58ca);
-  display: flex;
-  align-items: center;
-}
-
 .register-form {
   background: #fff;
-  width: 100%;
-  max-width: 420px;
+  width: 50%;
   padding: 35px;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-
-الprograms
-
-.programs-page {
-  background-color: #f8f9fa;
-  min-height: 100vh;
+.left-side{
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background-color:#1E3A8A
 }
 
-.program-card {
+.login-icon{
+  font-size: 350px;
+}
+.link-password{
+  margin-left:80px;
+}
+
+
+
+
+
+.hero-section {
+  background-size: cover;
+  background-position: center;
+}
+
+/* 💡 FEATURE CARD */
+.feature-card {
+  background: #111;
+  color: #fff;
+  border-radius: 16px;
   transition: 0.3s ease;
-  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* 🎓 PROGRAM CARD */
+.program-card {
+  border-radius: 16px;
+  transition: 0.3s ease;
 }
 
 .program-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
 }
 
-ال login 
-
-.login-page {
-  min-height: 100vh;
-  background: linear-gradient(135deg, #0d6efd, #0a58ca);
-}
-
-.login-form {
-  background: #fff;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-أل student 
-.dashboard-page {
-  background-color: #f8f9fa;
-  min-height: 100vh;
-}
-
-.app-card {
+/* 🧭 STEP CARD */
+.step-card {
+  background: #111;
+  color: #fff;
+  border-radius: 16px;
   transition: 0.3s ease;
-  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-.app-card:hover {
+.step-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-.status {
-  font-weight: bold;
-}
-
-.status.pending {
-  color: #ffc107;
-}
-
-.status.accepted {
-  color: #28a745;
-}
-
-.status.rejected {
-  color: #dc3545;
+  background: #1a1a1a;
 }
 
